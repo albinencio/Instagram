@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
@@ -28,7 +27,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configuration.server = "https://albisinsta.herokuapp.com/parse"
       })
     )
+    
+    NotificationCenter.default.addObserver(forName: Notification.Name("didLogout"), object: nil, queue: OperationQueue.main) { (Notification) in
+      print("Logout notification received")
+      self.logOut()
+    }
+    
     return true
+  }
+  
+  func logOut() {
+    // Logout the current user
+    PFUser.logOutInBackground(block: { (error) in
+      if let error = error {
+        print(error.localizedDescription)
+      } else {
+        print("Successful logout")
+        // Load and show the login view controller
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+        self.window?.rootViewController = loginViewController
+      }
+    })
   }
   
   func applicationWillResignActive(_ application: UIApplication) {

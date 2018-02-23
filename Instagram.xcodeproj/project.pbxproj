@@ -10,9 +10,10 @@
 		831F01E7CEBE0C5F16A328EB /* Pods_InstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE5DB3CF72DA9509CF1EBCE /* Pods_InstagramUITests.framework */; };
 		A198D18ED1C1227E2485354A /* Pods_InstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5A6ABF2F09938EC2B2E7A0 /* Pods_InstagramTests.framework */; };
 		C70B17CA2EDF1694FFEE5EFA /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF007770257F11977ED21CBD /* Pods_Instagram.framework */; };
+		D31A55D82040AC880043835F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31A55D72040AC880043835F /* FeedViewController.swift */; };
+		D32685D7203D258600CC985D /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D32685D6203D258600CC985D /* Billabong.ttf */; };
 		D3969BBC203C0F4C005ACEC2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3969BBB203C0F4C005ACEC2 /* LoginViewController.swift */; };
 		D3DBBA29203C0B8600970D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBBA28203C0B8600970D86 /* AppDelegate.swift */; };
-		D3DBBA2B203C0B8600970D86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBBA2A203C0B8600970D86 /* ViewController.swift */; };
 		D3DBBA2E203C0B8600970D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBBA2C203C0B8600970D86 /* Main.storyboard */; };
 		D3DBBA30203C0B8600970D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DBBA2F203C0B8600970D86 /* Assets.xcassets */; };
 		D3DBBA33203C0B8600970D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBBA31203C0B8600970D86 /* LaunchScreen.storyboard */; };
@@ -46,10 +47,11 @@
 		ABDD0CD8999FC0D42B9FE359 /* Pods-InstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramTests/Pods-InstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BF007770257F11977ED21CBD /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE5DB3CF72DA9509CF1EBCE /* Pods_InstagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31A55D72040AC880043835F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		D32685D6203D258600CC985D /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Billabong.ttf; path = Instagram/Fonts/Billabong.ttf; sourceTree = SOURCE_ROOT; };
 		D3969BBB203C0F4C005ACEC2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D3DBBA25203C0B8600970D86 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBBA28203C0B8600970D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3DBBA2A203C0B8600970D86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3DBBA2D203C0B8600970D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3DBBA2F203C0B8600970D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3DBBA32203C0B8600970D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,8 +120,17 @@
 			isa = PBXGroup;
 			children = (
 				D3969BBB203C0F4C005ACEC2 /* LoginViewController.swift */,
+				D31A55D72040AC880043835F /* FeedViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D3AC0D44203D33F80094A15B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D32685D6203D258600CC985D /* Billabong.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		D3DBBA1C203C0B8600970D86 = {
@@ -149,10 +160,10 @@
 			children = (
 				D3969BBA203C0F19005ACEC2 /* ViewControllers */,
 				D3DBBA28203C0B8600970D86 /* AppDelegate.swift */,
-				D3DBBA2A203C0B8600970D86 /* ViewController.swift */,
 				D3DBBA2C203C0B8600970D86 /* Main.storyboard */,
 				D3DBBA2F203C0B8600970D86 /* Assets.xcassets */,
 				D3DBBA31203C0B8600970D86 /* LaunchScreen.storyboard */,
+				D3AC0D44203D33F80094A15B /* Fonts */,
 				D3DBBA34203C0B8600970D86 /* Info.plist */,
 			);
 			path = Instagram;
@@ -295,6 +306,7 @@
 				D3DBBA33203C0B8600970D86 /* LaunchScreen.storyboard in Resources */,
 				D3DBBA30203C0B8600970D86 /* Assets.xcassets in Resources */,
 				D3DBBA2E203C0B8600970D86 /* Main.storyboard in Resources */,
+				D32685D7203D258600CC985D /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3969BBC203C0F4C005ACEC2 /* LoginViewController.swift in Sources */,
-				D3DBBA2B203C0B8600970D86 /* ViewController.swift in Sources */,
+				D31A55D82040AC880043835F /* FeedViewController.swift in Sources */,
 				D3DBBA29203C0B8600970D86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

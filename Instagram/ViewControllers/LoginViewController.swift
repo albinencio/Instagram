@@ -26,7 +26,14 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func onSignIn(_ sender: Any) {
-    
+    PFUser.logInWithUsername(inBackground: usernameField.text!, password: passwordField.text!) { (user, error) in
+      if user != nil {
+        print("Logged in successfully")
+        self.performSegue(withIdentifier: "loginSegue", sender: nil) // Transition to next view
+      } else {
+        print(error?.localizedDescription ?? "Error instance is nil")
+      }
+    }
   }
   
   @IBAction func onSignUp(_ sender: Any) {
@@ -35,8 +42,24 @@ class LoginViewController: UIViewController {
     newUser.username = usernameField.text
     newUser.password = passwordField.text
     
-    newUser.signUpInBackground { (<#Bool#>, <#Error?#>) in
-      <#code#>
+    newUser.signUpInBackground { (success, error) in
+      if success {
+        print("User created successfully")
+        self.performSegue(withIdentifier: "loginSegue", sender: nil) // Transition to next view
+      } else {
+        print(error?.localizedDescription ?? "Error instance is nil")
+        
+        // Handle different error codes
+        let code = error?._code
+        switch code {
+        case 202?:
+          print("Username is already taken")
+          break
+        default:
+          break
+        }
+        
+      }
     }
   }
   

@@ -8,8 +8,8 @@ Time spent: **X** hours spent in total
 
 The following **required** functionality is completed:
 
-- [ ] User can sign up to create a new account using Parse authentication (+1pt)
-- [ ] User can log in and log out of his or her account (+1pt)
+- [x] User can sign up to create a new account using Parse authentication (+1pt)
+- [x] User can log in and log out of his or her account (+1pt)
 - [ ] The current signed in user is persisted across app restarts (+1pt)
 - [ ] User can take a photo, add a caption, and post it to "Instagram" (+2pt)
 - [ ] User can view the last 20 posts submitted to "Instagram" (+2pt)
@@ -65,7 +65,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright © 2018 Alberto Nencioni. All rights reserved.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
