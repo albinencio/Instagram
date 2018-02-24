@@ -19,6 +19,7 @@
 		D3DBBA33203C0B8600970D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBBA31203C0B8600970D86 /* LaunchScreen.storyboard */; };
 		D3DBBA3E203C0B8600970D86 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBBA3D203C0B8600970D86 /* InstagramTests.swift */; };
 		D3DBBA49203C0B8600970D86 /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBBA48203C0B8600970D86 /* InstagramUITests.swift */; };
+		D3FA5248204221E8008C7CAC /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA5247204221E8008C7CAC /* ComposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D3DBBA44203C0B8600970D86 /* InstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBBA48203C0B8600970D86 /* InstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramUITests.swift; sourceTree = "<group>"; };
 		D3DBBA4A203C0B8600970D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FA5247204221E8008C7CAC /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		F56F49B042181C914EF7FE25 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			children = (
 				D3969BBB203C0F4C005ACEC2 /* LoginViewController.swift */,
 				D31A55D72040AC880043835F /* FeedViewController.swift */,
+				D3FA5247204221E8008C7CAC /* ComposeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				D3969BBC203C0F4C005ACEC2 /* LoginViewController.swift in Sources */,
 				D31A55D82040AC880043835F /* FeedViewController.swift in Sources */,
 				D3DBBA29203C0B8600970D86 /* AppDelegate.swift in Sources */,
+				D3FA5248204221E8008C7CAC /* ComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
