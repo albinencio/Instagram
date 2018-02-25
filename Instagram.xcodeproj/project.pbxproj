@@ -15,7 +15,6 @@
 		D3969BBC203C0F4C005ACEC2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3969BBB203C0F4C005ACEC2 /* LoginViewController.swift */; };
 		D3DBBA29203C0B8600970D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBBA28203C0B8600970D86 /* AppDelegate.swift */; };
 		D3DBBA2E203C0B8600970D86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBBA2C203C0B8600970D86 /* Main.storyboard */; };
-		D3DBBA30203C0B8600970D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3DBBA2F203C0B8600970D86 /* Assets.xcassets */; };
 		D3DBBA33203C0B8600970D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3DBBA31203C0B8600970D86 /* LaunchScreen.storyboard */; };
 		D3DBBA3E203C0B8600970D86 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBBA3D203C0B8600970D86 /* InstagramTests.swift */; };
 		D3DBBA49203C0B8600970D86 /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DBBA48203C0B8600970D86 /* InstagramUITests.swift */; };
@@ -54,7 +53,6 @@
 		D3DBBA25203C0B8600970D86 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3DBBA28203C0B8600970D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3DBBA2D203C0B8600970D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D3DBBA2F203C0B8600970D86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3DBBA32203C0B8600970D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3DBBA34203C0B8600970D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DBBA39203C0B8600970D86 /* InstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +162,6 @@
 				D3969BBA203C0F19005ACEC2 /* ViewControllers */,
 				D3DBBA28203C0B8600970D86 /* AppDelegate.swift */,
 				D3DBBA2C203C0B8600970D86 /* Main.storyboard */,
-				D3DBBA2F203C0B8600970D86 /* Assets.xcassets */,
 				D3DBBA31203C0B8600970D86 /* LaunchScreen.storyboard */,
 				D3AC0D44203D33F80094A15B /* Fonts */,
 				D3DBBA34203C0B8600970D86 /* Info.plist */,
@@ -307,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3DBBA33203C0B8600970D86 /* LaunchScreen.storyboard in Resources */,
-				D3DBBA30203C0B8600970D86 /* Assets.xcassets in Resources */,
 				D3DBBA2E203C0B8600970D86 /* Main.storyboard in Resources */,
 				D32685D7203D258600CC985D /* Billabong.ttf in Resources */,
 			);
