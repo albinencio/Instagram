@@ -18,12 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-nc-2x2">
-                                <rect key="frame" x="59" y="209" width="256" height="248"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Hz2-nc-2x2">
+                                <rect key="frame" x="102" y="251" width="171" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="FSL-cp-PKm"/>
+                                    <constraint firstAttribute="height" constant="165" id="IiK-VJ-h9C"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hz2-nc-2x2" firstAttribute="centerX" secondItem="nYl-4K-7nX" secondAttribute="centerX" id="FsH-zy-lJF"/>
+                            <constraint firstItem="Hz2-nc-2x2" firstAttribute="centerY" secondItem="nYl-4K-7nX" secondAttribute="centerY" id="mPa-Dn-saL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GnJ-1c-i80"/>
                     </view>
                 </viewController>
@@ -33,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launch" width="384" height="372"/>
+        <image name="launch" width="382" height="370"/>
     </resources>
 </document>

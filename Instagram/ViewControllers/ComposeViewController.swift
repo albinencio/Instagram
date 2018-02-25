@@ -64,11 +64,25 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
   }
   
   @IBAction func onCancel(_ sender: Any) {
-    
+    self.dismiss(animated: true) {
+      self.postImageView.image = #imageLiteral(resourceName: "image_placeholder")
+      self.postCaptionTextView.text = "Write a caption..."
+      self.postCaptionTextView.textColor = UIColor.lightGray
+    }
   }
   
   @IBAction func onPost(_ sender: Any) {
-    
+    Post.postUserImage(image: postImageView.image, withCaption: postCaptionTextView.text) { (success, error) in
+      if success {
+        self.dismiss(animated: true, completion: {
+          self.postImageView.image = #imageLiteral(resourceName: "image_placeholder")
+          self.postCaptionTextView.text = "Write a caption..."
+          self.postCaptionTextView.textColor = UIColor.lightGray
+        })
+      } else {
+        print(error?.localizedDescription ?? "Error instance was nil")
+      }
+    }
   }
   
   func resize(image: UIImage, newSize: CGSize) -> UIImage {
