@@ -177,7 +177,7 @@
                                         <connections>
                                             <outlet property="captionLabel" destination="lOL-Y2-XEU" id="WH9-Sk-iP4"/>
                                             <outlet property="photoView" destination="1jV-ph-qAV" id="TDD-Zf-rrb"/>
-                                            <segue destination="qUS-Pd-6dt" kind="show" id="1Fk-dy-OYf"/>
+                                            <segue destination="qUS-Pd-6dt" kind="show" identifier="detailSegue" id="1Fk-dy-OYf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -206,7 +206,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="SeK-be-RZq">
                             <connections>
-                                <segue destination="s1k-FR-3Ld" kind="presentation" id="mhd-5g-nJC"/>
+                                <segue destination="s1k-FR-3Ld" kind="presentation" identifier="composeSegue" id="mhd-5g-nJC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -226,23 +226,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vay-N8-gcQ">
-                                <rect key="frame" x="0.0" y="64" width="145" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vay-N8-gcQ">
+                                <rect key="frame" x="0.0" y="64" width="150.5" height="150.5"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vay-N8-gcQ" secondAttribute="height" multiplier="1:1" id="HsR-sb-7mU"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="OTj-1m-s6q" appends="YES" id="41i-aV-Fue"/>
                                 </connections>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Write a caption..." translatesAutoresizingMaskIntoConstraints="NO" id="D8T-3Y-NDh">
-                                <rect key="frame" x="153" y="64" width="206" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" scrollEnabled="NO" text="Write a caption..." translatesAutoresizingMaskIntoConstraints="NO" id="D8T-3Y-NDh">
+                                <rect key="frame" x="162.5" y="64" width="200.5" height="150.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200.5" id="pM6-pr-gZ4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vay-N8-gcQ" firstAttribute="top" secondItem="1GB-mW-BK4" secondAttribute="top" id="LH5-K9-7CO"/>
+                            <constraint firstItem="1GB-mW-BK4" firstAttribute="trailing" secondItem="D8T-3Y-NDh" secondAttribute="trailing" constant="12" id="NDP-I6-DAO"/>
+                            <constraint firstItem="D8T-3Y-NDh" firstAttribute="top" secondItem="1GB-mW-BK4" secondAttribute="top" id="QoH-NL-Daj"/>
+                            <constraint firstItem="vay-N8-gcQ" firstAttribute="leading" secondItem="1GB-mW-BK4" secondAttribute="leading" id="gJp-yv-NRv"/>
+                            <constraint firstItem="D8T-3Y-NDh" firstAttribute="leading" secondItem="vay-N8-gcQ" secondAttribute="trailing" constant="12" id="kva-eE-3OY"/>
+                            <constraint firstItem="D8T-3Y-NDh" firstAttribute="height" secondItem="vay-N8-gcQ" secondAttribute="height" id="uRg-wJ-GPi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1GB-mW-BK4"/>
                     </view>
                     <navigationItem key="navigationItem" id="5Pp-2q-tSl">
@@ -301,20 +313,55 @@
             </objects>
             <point key="canvasLocation" x="1028" y="84"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Detail View Controller-->
         <scene sceneID="7tq-Ui-8Rg">
             <objects>
-                <viewController id="qUS-Pd-6dt" sceneMemberID="viewController">
+                <viewController id="qUS-Pd-6dt" customClass="PostDetailViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ev2-Kt-abc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wd2-P0-aod">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wd2-P0-aod" secondAttribute="height" multiplier="1:1" id="8SP-1Y-MMf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date 📅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pnp-QO-PDt">
+                                <rect key="frame" x="303" y="447" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the caption to this post 🧐" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnM-HX-5QN">
+                                <rect key="frame" x="8" y="476" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iYU-IY-Rqs" firstAttribute="trailing" secondItem="SnM-HX-5QN" secondAttribute="trailing" constant="8" id="1br-LZ-kbm"/>
+                            <constraint firstItem="Wd2-P0-aod" firstAttribute="top" secondItem="iYU-IY-Rqs" secondAttribute="top" id="4PO-kY-uPM"/>
+                            <constraint firstItem="Wd2-P0-aod" firstAttribute="leading" secondItem="iYU-IY-Rqs" secondAttribute="leading" id="HyX-7y-Asb"/>
+                            <constraint firstItem="SnM-HX-5QN" firstAttribute="top" secondItem="Pnp-QO-PDt" secondAttribute="bottom" constant="8" id="QZk-l8-S2s"/>
+                            <constraint firstItem="Pnp-QO-PDt" firstAttribute="top" secondItem="Wd2-P0-aod" secondAttribute="bottom" constant="8" id="Yp2-zl-8jF"/>
+                            <constraint firstItem="iYU-IY-Rqs" firstAttribute="trailing" secondItem="Pnp-QO-PDt" secondAttribute="trailing" constant="8" id="che-XQ-J3n"/>
+                            <constraint firstItem="SnM-HX-5QN" firstAttribute="leading" secondItem="iYU-IY-Rqs" secondAttribute="leading" constant="8" id="cqe-8p-S7p"/>
+                            <constraint firstItem="Wd2-P0-aod" firstAttribute="trailing" secondItem="iYU-IY-Rqs" secondAttribute="trailing" id="rCW-eD-gE5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iYU-IY-Rqs"/>
                     </view>
+                    <connections>
+                        <outlet property="captionLabel" destination="SnM-HX-5QN" id="Oia-BI-kvd"/>
+                        <outlet property="picView" destination="Wd2-P0-aod" id="904-rC-tdv"/>
+                        <outlet property="timeLabel" destination="Pnp-QO-PDt" id="Rtl-sO-OJS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zby-GR-y7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577" y="-622"/>
+            <point key="canvasLocation" x="2576.8000000000002" y="-622.03898050974522"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZHS-LY-ndy">

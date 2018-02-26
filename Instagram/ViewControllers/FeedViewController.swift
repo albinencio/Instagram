@@ -26,7 +26,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     tableView.dataSource = self
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 50
-    tableView.separatorInset = .zero
+    tableView.separatorStyle = .none
     
     // Initialize refresh control
     let refreshControl = UIRefreshControl()
@@ -68,7 +68,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Construct query
     let query = Post.query()
     query?.order(byDescending: "createdAt")
-    query?.includeKey("author")
+    query?.includeKeys(["author", "createdAt"])
     query?.limit = 20
     
     // Fetch data asynchronously
@@ -81,6 +81,17 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     })
     
     tableView.reloadData()
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "detailSegue" {
+      let cell = sender as! PostCell
+      if let indexPath = tableView.indexPath(for: cell) {
+        let post = posts[indexPath.row]
+        let detailViewController = segue.destination as! PostDetailViewController
+        detailViewController.post = post
+      }
+    }
   }
   
   override func didReceiveMemoryWarning() {

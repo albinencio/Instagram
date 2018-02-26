@@ -17,6 +17,8 @@ class ComposeViewController: UIViewController, UIImagePickerControllerDelegate, 
     super.viewDidLoad()
     
     postImageView.isUserInteractionEnabled = true
+    postCaptionTextView.isUserInteractionEnabled = true
+    postCaptionTextView.showsVerticalScrollIndicator = true
     postCaptionTextView.delegate = self
     
     postImageView.image = #imageLiteral(resourceName: "image_placeholder")
