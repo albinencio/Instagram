@@ -14,6 +14,10 @@ class LoginViewController: UIViewController {
   
   @IBOutlet weak var usernameField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
+  @IBOutlet weak var loginButton: UIButton!
+  @IBOutlet weak var usernameSubview: UIView!
+  @IBOutlet weak var passwordSubview: UIView!
+  @IBOutlet weak var loginSubview: UIView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,6 +42,12 @@ class LoginViewController: UIViewController {
     
     pastelView.startAnimation()
     view.insertSubview(pastelView, at: 0)
+    
+    usernameSubview.layer.cornerRadius = 3
+    passwordSubview.layer.cornerRadius = usernameSubview.layer.cornerRadius
+    loginSubview.layer.borderColor = usernameSubview.layer.backgroundColor
+    loginSubview.layer.borderWidth = 1
+    loginSubview.layer.cornerRadius = usernameSubview.layer.cornerRadius
   }
   
   override func didReceiveMemoryWarning() {
