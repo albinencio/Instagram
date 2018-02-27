@@ -16,6 +16,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
   var posts: [PFObject] = []
   
   override func viewWillAppear(_ animated: Bool) {
+    super.viewDidAppear(true)
     getPosts()
   }
   
@@ -75,12 +76,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     query?.findObjectsInBackground(block: { (posts, error) in
       if let posts = posts {
         self.posts = posts
+        self.tableView.reloadData() // Reload data
       } else {
         print(error?.localizedDescription ?? "Error instance was nil")
       }
     })
-    
-    tableView.reloadData()
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

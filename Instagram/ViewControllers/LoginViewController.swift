@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import Pastel
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
   
   @IBOutlet weak var usernameField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
@@ -21,6 +21,9 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    usernameField.delegate = self
+    passwordField.delegate = self
     
     let pastelView = PastelView(frame: self.view.bounds)
     
@@ -64,6 +67,12 @@ class LoginViewController: UIViewController {
         print(error?.localizedDescription ?? "Error instance is nil")
       }
     }
+  }
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.usernameField.resignFirstResponder()
+    self.passwordField.resignFirstResponder()
+    return true
   }
   
   @IBAction func onSignUp(_ sender: Any) {

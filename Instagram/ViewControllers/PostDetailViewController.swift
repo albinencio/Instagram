@@ -40,7 +40,7 @@ class PostDetailViewController: UIViewController {
   
   func dateFormatter(date: Date?) -> String {
     let formatter = DateFormatter()
-    formatter.dateFormat = "MMM dd"
+    formatter.dateFormat = "🗓 MMM dd"
     let formatted = formatter.string(from: date!)
     return formatted
   }
