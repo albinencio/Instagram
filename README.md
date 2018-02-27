@@ -55,8 +55,6 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Credits
 
-List any 3rd party libraries, icons, graphics, or other assets you used in your app.
-
 - [Parse](http://parseplatform.org/) - backend platform of the application.
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 - [Pastel](https://github.com/cruisediary/Pastel) - gradient in background of login view
@@ -65,7 +63,7 @@ List any 3rd party libraries, icons, graphics, or other assets you used in your 
 ## Notes
 
 This project was a lot of fun! I definitely plan on working on it more to make it even more realistic and similar to the original Instagram app. I really liked working on styling the login page; if I had had more time, I would have styled the rest of the views too.
-The biggest challenges were to keep track of the general flow of the application, as there were many user interactions to consider.
+The biggest challenge was definitely to keep track of the general flow of the application, as there were many user interactions to consider.
 
 ## License
 
