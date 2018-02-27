@@ -37,18 +37,19 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] Autolayout constraints on all views.
+- [x] Launch screen.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. How to use a different backend platform that allows to store images of higher quality.
+2. How to allow for posts containing videos and not only images.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/albinencio/Instagram/blob/master/InstagramDemo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -56,12 +57,15 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 List any 3rd party libraries, icons, graphics, or other assets you used in your app.
 
+- [Parse](http://parseplatform.org/) - backend platform of the application.
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+- [Pastel](https://github.com/cruisediary/Pastel) - gradient in background of login view
 
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+This project was a lot of fun! I definitely plan on working on it more to make it even more realistic and similar to the original Instagram app. I really liked working on styling the login page; if I had had more time, I would have styled the rest of the views too.
+The biggest challenges were to keep track of the general flow of the application, as there were many user interactions to consider.
 
 ## License
 
